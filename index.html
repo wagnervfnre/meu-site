@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tragédia em Perdizes-MG: Aluna de Autoescola Causa Acidente Fatal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset e Estilos Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #d32f2f;
+            --primary-dark: #b71c1c;
+            --secondary-color: #f5f5f5;
+            --dark-text: #333;
+            --light-text: #777;
+            --border-color: #e0e0e0;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: var(--dark-text);
+        }
+
+        /* Layout Principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Cabeçalho */
+        .top-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .top-header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .city-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .breaking-news {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ffc107;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.8em;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Navegação */
+        .navbar {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar a {
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1em;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .navbar a.active {
+            background-color: var(--primary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            font-size: 0.9em;
+            color: var(--light-text);
+            margin: 15px 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Conteúdo Principal */
+        .main-content {
+            padding: 0 30px 30px;
+        }
+
+        .news-title {
+            font-size: 2.2em;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .news-subtitle {
+            font-size: 1.3em;
+            color: var(--light-text);
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .author-date {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+
+        .author-info {
+            font-size: 0.9em;
+            color: var(--light-text);
+        }
+
+        .social-share {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-share span {
+            color: var(--primary-color);
+            cursor: pointer;
+            font-weight: bold;
+            transition: var(--transition);
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .social-share span:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Imagens */
+        .main-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .main-image:hover {
+            transform: scale(1.01);
+        }
+
+        .image-caption {
+            font-size: 0.85em;
+            color: var(--light-text);
+            text-align: center;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .image-container {
+            margin: 20px 0;
+            border: 1px solid var(--border-color);
+            padding: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+
+        .image-container:hover {
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .suspect-image-container {
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 15px;
+            max-width: 280px;
+        }
+
+        .victim-image-container {
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 15px;
+            max-width: 280px;
+        }
+
+        .city-image-container {
+            width: 100%;
+            margin: 25px 0;
+        }
+
+        .suspect-image,
+        .victim-image,
+        .city-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .suspect-image-caption,
+        .victim-image-caption,
+        .city-image-caption {
+            font-size: 0.8em;
+            color: var(--light-text);
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        /* Texto e Conteúdo */
+        .news-content {
+            overflow: hidden;
+        }
+
+        .news-content p {
+            margin-bottom: 1.5em;
+            text-align: justify;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .victim-count {
+            background-color: #ffebee;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .victim-count h4 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .victim-count ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .victim-count li {
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .victim-count li:before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .quote {
+            background-color: #fcebeb;
+            border-left: 5px solid var(--primary-color);
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .quote:before {
+            content: "\201C";
+            font-size: 4em;
+            color: var(--primary-color);
+            position: absolute;
+            left: 10px;
+            top: -10px;
+            opacity: 0.3;
+        }
+
+        .quote p:last-child {
+            margin-bottom: 0;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: var(--dark-text);
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .tag {
+            background-color: var(--secondary-color);
+            color: var(--dark-text);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Notícias Relacionadas */
+        .related-news {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid var(--border-color);
+            clear: both;
+        }
+
+        .related-news h3 {
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .related-news ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .related-news li {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .related-news a {
+            color: var(--dark-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: block;
+            padding: 5px 0;
+        }
+
+        .related-news a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 0.85em;
+            color: var(--light-text);
+            border-top: 1px solid var(--border-color);
+            margin-top: 30px;
+            background-color: var(--secondary-color);
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .news-title {
+                font-size: 1.9em;
+            }
+
+            .news-subtitle {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .top-header h1 {
+                font-size: 2.2em;
+            }
+
+            .breaking-news {
+                position: static;
+                display: inline-block;
+                margin-top: 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                text-align: left;
+                border-bottom: 1px solid #555;
+            }
+
+            .main-content {
+                padding: 0 15px 20px;
+            }
+
+            .news-title {
+                font-size: 1.7em;
+            }
+
+            .author-date {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .social-share {
+                align-self: stretch;
+                justify-content: space-around;
+            }
+
+            .suspect-image-container,
+            .victim-image-container {
+                float: none;
+                margin: 20px auto;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-header h1 {
+                font-size: 1.8em;
+            }
+
+            .news-title {
+                font-size: 1.5em;
+            }
+
+            .news-subtitle {
+                font-size: 1.1em;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="top-header">
+            <h1>JORNAL PERDIZES</h1>
+            <div class="city-badge">Notícias da cidade de Perdizes - MG</div>
+            <div class="breaking-news">NOTÍCIA DE ÚLTIMA HORA</div>
+        </header>
+
+        <nav class="navbar">
+            <a href="#" class="active"><i class="fas fa-home"></i> HOME</a>
+            <a href="#"><i class="fas fa-city"></i> PERDIZES-MG</a>
+            <a href="#"><i class="fas fa-car"></i> TRÂNSITO</a>
+            <a href="#"><i class="fas fa-shield-alt"></i> POLÍCIA</a>
+            <a href="#"><i class="fas fa-phone"></i> CONTATO</a>
+        </nav>
+
+        <div class="breadcrumb">
+            <a href="#"><i class="fas fa-home"></i> Home</a> &gt; <a href="#">Perdizes-MG</a> &gt;
+            <strong>Tragédia</strong>
+        </div>
+
+        <main class="main-content">
+            <h1 class="news-title">Tragédia Choca Perdizes-MG: Aluna de Autoescola Causa Acidente Fatal em Faixa de
+                Pedestres</h1>
+            <h2 class="news-subtitle">Uma pessoa morre e outra fica gravemente ferida após veículo em treinamento
+                avançar sobre a faixa de pedestres na Avenida Principal.</h2>
+
+            <div class="author-date">
+                <div class="author-info">
+                    Por <strong>Reportagem de Emergência</strong> | <time id="current-date">Carregando data...</time> às
+                    11:15 (Atualizado)
+                </div>
+                <div class="social-share">
+                    <span><i class="fab fa-facebook-f"></i> Facebook</span>
+                    <span><i class="fab fa-twitter"></i> Twitter</span>
+                    <span><i class="fab fa-whatsapp"></i> WhatsApp</span>
+                </div>
+            </div>
+
+            <div class="tags">
+                <span class="tag">Acidente</span>
+                <span class="tag">Perdizes-MG</span>
+                <span class="tag">Autoescola</span>
+                <span class="tag">Trânsito</span>
+                <span class="tag">Fatalidade</span>
+                <span class="tag">Minas Gerais</span>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Carro de Autoescola após acidente" class="main-image">
+            <p class="image-caption">O veículo de instrução, um modelo Honda Civic da Autoescola Aprenda Fácil, foi
+                apreendido para perícia. (Foto: Arquivo Policial)</p>
+
+            <div class="news-content">
+                <p><span class="highlight">PERDIZES-MG</span> – A tranquilidade da cidade foi rompida na manhã de hoje
+                    por uma tragédia no trânsito. Um carro de autoescola, ocupado por uma aluna em aula prática e seu
+                    instrutor, perdeu o controle ao se aproximar de um cruzamento na movimentada Avenida Principal e
+                    <span class="highlight">avançou descontroladamente sobre a faixa de pedestres</span>.
+                </p>
+
+                <div class="victim-count">
+                    <h4>Vítimas do Acidente:</h4>
+                    <ul>
+                        <li><strong>Natanael</strong> - 34 anos - Morreu no local</li>
+                        <li><strong>Natália</strong> - 32 anos - Enviada para o Hospital Municipal em estado grave</li>
+                    </ul>
+                </div>
+
+                <div class="image-container city-image-container">
+                    <img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Vista da cidade de Perdizes-MG" class="city-image">
+                    <p class="city-image-caption">Vista parcial do centro da cidade de Perdizes, em Minas Gerais. (Foto:
+                        Acervo/Jornal Perdizes)</p>
+                </div>
+
+                <div class="image-container victim-image-container">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                        alt="Foto do casal Natanael e Natália" class="victim-image">
+                    <p class="victim-image-caption">O casal <strong>Natanael</strong> e <strong>Natália</strong> foi
+                        vítima do acidente. (Foto: Redes Sociais)</p>
+                </div>
+
+                <p>O acidente, ocorrido por volta das 10h30, resultou na morte imediata de <strong>Natanael</strong> e
+                    deixou sua esposa, <strong>Natália</strong>, gravemente ferida. <strong>Natália</strong> foi
+                    encaminhada para o Hospital Municipal de Perdizes, onde permanece internada em estado grave.</p>
+
+                <p>Segundo testemunhas, o veículo, que realizava uma manobra de conversão, <span
+                        class="highlight">acelerou bruscamente em vez de frear</span>, atingindo o casal que iniciava a
+                    travessia com o sinal aberto. O instrutor, que estava no banco do passageiro, não conseguiu acionar
+                    os freios de segurança a tempo.</p>
+
+                <div class="quote">
+                    <p>"Foi um caos. O carro veio muito rápido, sem freiar, e atingiu as duas pessoas na faixa. O
+                        barulho foi horrível. É revoltante que uma aula de direção tenha terminado em morte. Perdizes é
+                        uma cidade tranquila, não estamos acostumados com tragédias como essa."</p>
+                    <p>– Pedro Santos, comerciante e testemunha ocular.</p>
+                </div>
+
+                <h3 class="section-title">Suspeita e Investigação Policial</h3>
+
+                <div class="image-container suspect-image-container">
+                    <img src="img/supeita.jpeg" alt="Foto da suspeita Stefany Luiza" class="suspect-image">
+                    <p class="suspect-image-caption">Stefany Luiza, a Rainha da Cidade 2024, após a delegacia. (Foto:
+                        Arquivo Pessoal/Redes Sociais)</p>
+                </div>
+
+                <p>A aluna ao volante foi identificada como <strong>Stefany Luiza</strong>, e o caso ganhou contornos
+                    adicionais após fontes da Polícia Civil confirmarem que ela é a mesma jovem que venceu o concurso
+                    <strong>Rainha da Cidade em 2024</strong>. O choque da comunidade é grande ao ver uma figura pública
+                    da cidade envolvida em tal tragédia. As suspeitas preliminares indicam que, além do nervosismo comum
+                    de um aluno, a jovem possa ter tido um mal súbito ou sofrido um lapso de atenção grave no momento da
+                    manobra.
+                </p>
+
+                <p><strong>Stefany Luiza</strong> e o instrutor foram levados à Delegacia de Polícia Civil de Perdizes
+                    para prestar depoimento e estão em estado de choque. A Polícia Civil abriu inquérito para investigar
+                    as causas da perda de controle do veículo, a saúde da aluna e apurar a responsabilidade do instrutor
+                    e da autoescola no incidente fatal. O veículo foi apreendido para perícia técnica.</p>
+
+                <p>O Departamento Estadual de Trânsito (Detran-MG) informou que abrirá um processo administrativo para
+                    <span class="highlight">verificar a suspensão das atividades da autoescola</span> e a licença do
+                    instrutor. A comunidade de Perdizes lamenta a perda e exige medidas imediatas de segurança para os
+                    pedestres da cidade, questionando a forma como as aulas práticas são conduzidas em vias de
+                    movimento.
+                </p>
+
+                <div class="quote">
+                    <p>"Estamos todos muito abalados. Perdizes é uma cidade pacata, onde todos se conhecem. Essa
+                        tragédia atingiu diretamente famílias conhecidas da nossa comunidade. Vamos acompanhar de perto
+                        as investigações e prestar todo o apoio necessário à família das vítimas."</p>
+                    <p>– Maria Oliveira, prefeita de Perdizes-MG.</p>
+                </div>
+            </div>
+
+            <div class="related-news">
+                <h3>Mais Notícias de Perdizes-MG</h3>
+                <ul>
+                    <li><a href="#">Prefeitura anuncia novo projeto de segurança viária após tragédia</a></li>
+                    <li><a href="#">Moradores pedem reforço na iluminação do centro da cidade</a></li>
+                    <li><a href="#">Cidade registra aumento no número de multas por excesso de velocidade</a></li>
+                    <li><a href="#">Festival de Inverno de Perdizes terá edição especial em memória das vítimas</a></li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            &copy; <span id="current-year">2025</span> JORNAL PERDIZES - Notícias da cidade de Perdizes-MG. Todos os
+            direitos reservados.
+        </footer>
+    </div>
+
+    <script>
+        // Atualizar data atual
+        function updateDate() {
+            const now = new Date();
+            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            const formattedDate = now.toLocaleDateString('pt-BR', options);
+            document.getElementById('current-date').textContent = formattedDate;
+
+            // Atualizar ano no rodapé
+            document.getElementById('current-year').textContent = now.getFullYear();
+        }
+
+        // Inicializar quando a página carregar
+        document.addEventListener('DOMContentLoaded', function () {
+            updateDate();
+
+            // Adicionar efeito de clique nos botões de compartilhamento
+            const shareButtons = document.querySelectorAll('.social-share span');
+            shareButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    alert(Compartilhando via ${ this.textContent.trim() });
+                });
+            });
+
+            // Adicionar efeito de clique nas tags
+            const tags = document.querySelectorAll('.tag');
+            tags.forEach(tag => {
+                tag.addEventListener('click', function () {
+                    alert(Buscando notícias sobre: ${ this.textContent });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
